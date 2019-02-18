@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.1.0" sequence="0" timestamp="1549602699365" analysisTimestamp="1549602699423" release="">
+  <Project projectName="">
+    <Jar>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/build/classes/java/main/main/java/InvalidOperationException.class</Jar>
+    <Jar>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/build/classes/java/main/main/java/Item.class</Jar>
+    <Jar>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/build/classes/java/main/main/java/PowerSetData.class</Jar>
+    <Jar>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/build/classes/java/main/main/java/Main.class</Jar>
+    <Jar>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/build/classes/java/main/main/java/PowerSet.class</Jar>
+    <Jar>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/build/classes/java/main/main/java/RandomNumber.class</Jar>
+    <SrcDir>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/src/main/java/RandomNumber.java</SrcDir>
+    <SrcDir>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/src/main/java/InvalidOperationException.java</SrcDir>
+    <SrcDir>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/src/main/java/PowerSetData.java</SrcDir>
+    <SrcDir>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/src/main/java/Main.java</SrcDir>
+    <SrcDir>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/src/main/java/PowerSet.java</SrcDir>
+    <SrcDir>/Users/amehlhas/ASU/Alex/2019-1Spring/SER316SpringB-C/Assignments/Lab 4 - Review/Code Review/PowerSet_Part/TestingProject/src/main/java/Item.java</SrcDir>
+  </Project>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE">
+    <Class classname="main.java.Item">
+      <SourceLine classname="main.java.Item" start="6" end="8" sourcefile="Item.java" sourcepath="main/java/Item.java"/>
+    </Class>
+    <Field classname="main.java.Item" name="key" signature="I" isStatic="false">
+      <SourceLine classname="main.java.Item" sourcefile="Item.java" sourcepath="main/java/Item.java"/>
+    </Field>
+    <SourceLine classname="main.java.Item" start="7" end="7" startBytecode="6" endBytecode="6" sourcefile="Item.java" sourcepath="main/java/Item.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="main.java.Main">
+      <SourceLine classname="main.java.Main" start="13" end="62" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Class>
+    <Method classname="main.java.Main" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="main.java.Main" start="21" end="62" startBytecode="0" endBytecode="454" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1123" end="1123" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="main.java.Main" start="50" end="50" startBytecode="102" endBytecode="102" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="main.java.Main">
+      <SourceLine classname="main.java.Main" start="13" end="62" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Class>
+    <Method classname="main.java.Main" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="main.java.Main" start="21" end="62" startBytecode="0" endBytecode="454" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="146" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="main.java.Main" start="21" end="21" startBytecode="11" endBytecode="11" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+  </BugInstance>
+  <BugInstance type="NP_DEREFERENCE_OF_READLINE_VALUE" priority="2" rank="15" abbrev="NP" category="STYLE">
+    <Class classname="main.java.Main">
+      <SourceLine classname="main.java.Main" start="13" end="62" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Class>
+    <Method classname="main.java.Main" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="main.java.Main" start="21" end="62" startBytecode="0" endBytecode="454" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="99" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="main.java.Main" start="50" end="50" startBytecode="99" endBytecode="99" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+  </BugInstance>
+  <BugInstance type="NP_DEREFERENCE_OF_READLINE_VALUE" priority="2" rank="15" abbrev="NP" category="STYLE">
+    <Class classname="main.java.Main">
+      <SourceLine classname="main.java.Main" start="13" end="62" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Class>
+    <Method classname="main.java.Main" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="main.java.Main" start="21" end="62" startBytecode="0" endBytecode="454" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+    </Method>
+    <LocalVariable name="accStr" register="2" pc="45" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="main.java.Main" start="48" end="48" startBytecode="93" endBytecode="93" sourcefile="Main.java" sourcepath="main/java/Main.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="main.java.PowerSetData">
+      <SourceLine classname="main.java.PowerSetData" start="15" end="141" sourcefile="PowerSetData.java" sourcepath="main/java/PowerSetData.java"/>
+    </Class>
+    <Method classname="main.java.PowerSetData" name="initializeArray" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="main.java.PowerSetData" start="25" end="72" startBytecode="0" endBytecode="590" sourcefile="PowerSetData.java" sourcepath="main/java/PowerSetData.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1123" end="1123" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="main.java.PowerSetData" start="43" end="43" startBytecode="61" endBytecode="61" sourcefile="PowerSetData.java" sourcepath="main/java/PowerSetData.java"/>
+    <SourceLine classname="main.java.PowerSetData" start="64" end="64" startBytecode="180" endBytecode="180" sourcefile="PowerSetData.java" sourcepath="main/java/PowerSetData.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE">
+    <Class classname="main.java.PowerSetData">
+      <SourceLine classname="main.java.PowerSetData" start="15" end="141" sourcefile="PowerSetData.java" sourcepath="main/java/PowerSetData.java"/>
+    </Class>
+    <Field classname="main.java.PowerSetData" name="algo" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="main.java.PowerSetData" sourcefile="PowerSetData.java" sourcepath="main/java/PowerSetData.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 7 Feb 2019 22:11:39 -0700" total_classes="6" referenced_classes="60" total_bugs="7" total_size="187" num_packages="1" java_version="9.0.4" vm_version="9.0.4+11" cpu_seconds="7.69" clock_seconds="2.26" peak_mbytes="234.71" alloc_mbytes="4096.00" gc_seconds="0.02" priority_2="4" priority_1="3">
+    <PackageStats package="main.java" total_bugs="7" total_types="6" total_size="187" priority_2="4" priority_1="3">
+      <ClassStats class="main.java.InvalidOperationException" sourceFile="InvalidOperationException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="main.java.Item" sourceFile="Item.java" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="main.java.Main" sourceFile="Main.java" interface="false" size="26" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="main.java.PowerSet" sourceFile="PowerSet.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="main.java.PowerSetData" sourceFile="PowerSetData.java" interface="false" size="68" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="main.java.RandomNumber" sourceFile="RandomNumber.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="395" invocations="617" avgMicrosecondsPerInvocation="641" maxMicrosecondsPerInvocation="16525" standardDeviationMicrosecondsPerInvocation="1456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="127" invocations="60" avgMicrosecondsPerInvocation="2125" maxMicrosecondsPerInvocation="18697" standardDeviationMicrosecondsPerInvocation="3560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="96" invocations="249" avgMicrosecondsPerInvocation="386" maxMicrosecondsPerInvocation="4656" standardDeviationMicrosecondsPerInvocation="532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="93" invocations="60" avgMicrosecondsPerInvocation="1554" maxMicrosecondsPerInvocation="12672" standardDeviationMicrosecondsPerInvocation="2416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="61" invocations="621" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="4916" standardDeviationMicrosecondsPerInvocation="255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="52" invocations="576" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="1841" standardDeviationMicrosecondsPerInvocation="187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="49" invocations="18" avgMicrosecondsPerInvocation="2752" maxMicrosecondsPerInvocation="42569" standardDeviationMicrosecondsPerInvocation="9664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="47" invocations="19" avgMicrosecondsPerInvocation="2496" maxMicrosecondsPerInvocation="12133" standardDeviationMicrosecondsPerInvocation="3193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="45" invocations="60" avgMicrosecondsPerInvocation="757" maxMicrosecondsPerInvocation="9446" standardDeviationMicrosecondsPerInvocation="1528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="45" invocations="90" avgMicrosecondsPerInvocation="502" maxMicrosecondsPerInvocation="12378" standardDeviationMicrosecondsPerInvocation="1454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="42" invocations="18" avgMicrosecondsPerInvocation="2342" maxMicrosecondsPerInvocation="13005" standardDeviationMicrosecondsPerInvocation="3253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="37" invocations="18" avgMicrosecondsPerInvocation="2095" maxMicrosecondsPerInvocation="8188" standardDeviationMicrosecondsPerInvocation="2562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="37" invocations="18" avgMicrosecondsPerInvocation="2071" maxMicrosecondsPerInvocation="8583" standardDeviationMicrosecondsPerInvocation="2587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="35" invocations="60" avgMicrosecondsPerInvocation="587" maxMicrosecondsPerInvocation="7475" standardDeviationMicrosecondsPerInvocation="1152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="60" avgMicrosecondsPerInvocation="498" maxMicrosecondsPerInvocation="4275" standardDeviationMicrosecondsPerInvocation="943"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="29" invocations="60" avgMicrosecondsPerInvocation="491" maxMicrosecondsPerInvocation="10342" standardDeviationMicrosecondsPerInvocation="1444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="28" invocations="18" avgMicrosecondsPerInvocation="1609" maxMicrosecondsPerInvocation="7546" standardDeviationMicrosecondsPerInvocation="2127"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
