@@ -28,14 +28,14 @@ public class RandomNumber {
         /**
          * The current seed of the generator. 
          */
-        private long currentSeed;
+        private long CURRENTSEED;
     
         /**
          * Constructs a RandomNumber object and initializes it
          * with <code>System.currentTimeMillis()</code>
          */
         public RandomNumber() {
-                currentSeed = System.currentTimeMillis() % MODULUS;
+                CURRENTSEED = System.currentTimeMillis() % MODULUS;
         }
     
         /**
@@ -45,7 +45,7 @@ public class RandomNumber {
          * setting of the start seed.
          */
         public RandomNumber(long seed) {
-                currentSeed = Math.abs(seed) % MODULUS;
+                CURRENTSEED = Math.abs(seed) % MODULUS;
         }
                 
         
@@ -54,10 +54,10 @@ public class RandomNumber {
          * @return The next random number in [0,1].
          */
         public double nextDoubleRand() {
-                long temp = MULTIPLIER*(currentSeed%QUOT) - 
-                                REM*(currentSeed/QUOT);
-                currentSeed = (temp > 0) ? temp : temp + MODULUS;
-                return (double) currentSeed / (double) MODULUS;
+                long temp = MULTIPLIER*(CURRENTSEED%QUOT) - 
+                                REM*(CURRENTSEED/QUOT);
+                CURRENTSEED = (temp > 0) ? temp : temp + MODULUS;
+                return (double) CURRENTSEED / (double) MODULUS;
         }
         
         /**
